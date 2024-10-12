@@ -46,7 +46,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
