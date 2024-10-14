@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Website</title>
     <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Food Website</a>
-                <nav>
-                    <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Thực đơn</a></li>
-                        <li><a href="#">Sự kiện</a></li>
-                        <li><a href="#">Đặt bàn</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <nav>
+            <ul class="sidebar">
+                <li onclick= hideSideBar()><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="141111"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Thực đơn</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="#">Đặt bàn</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+            <ul class="default-nav">
+                <li class="nav-logo"><a href="#"><img src="./public/utc.jpg" alt="Logo"></a></li>
+                <li class="hideOnMobile"><a href="#">Trang chủ</a></li>
+                <li class="hideOnMobile"><a href="#">Thực đơn</a></li>
+                <li class="hideOnMobile"><a href="#">Sự kiện</a></li>
+                <li class="hideOnMobile"><a href="#">Đặt bàn</a></li>
+                <li class="hideOnMobile"><a href="#">Tin tức</a></li>
+                <li class="hideOnMobile"><a href="#">Liên hệ</a></li>
+                <li class="menu-button" onclick= showSideBar()> <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="141111"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> </a> </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -57,9 +65,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Food Website. Tất cả quyền được bảo lưu.</p>
+                <p>© 2023 Food Website. Tất cả quyền được bảo lưu.</p>
             </div>
         </div>
     </footer>
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
 </body>
 </html>

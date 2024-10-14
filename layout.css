@@ -11,59 +11,67 @@ body {
     min-height: 100vh;
 }
 
-header {
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-
 nav {
-    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    background-color: #f0f0f0;
+}
+nav a:first-child:hover{
+    background-color: white;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top :0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: black;
+}
+.sidebar {
+    display: none;
+    transition: all 0.3s ease-in-out; /* Thêm thuộc tính transition */
+}
+.sidebar li{
     width: 100%;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+.sidebar a{
+    width: 100%;
 }
-
-nav ul li {
-    margin: 0.5rem 0;
+.sidebar li:first-child{
+    margin-left: 70%;
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff6b6b;
-}
-
 main {
     flex-grow: 1;
 }
@@ -112,26 +120,19 @@ footer {
     border-top: 1px solid #555;
 }
 
-@media screen and (min-width: 768px) {
-    header {
-        padding: 1rem 2rem;
+.menu-button{
+    display: none;
+}
+.default-nav {
+    font-size: 20px;
+}
+@media screen and (max-width: 800px) {
+    .hideOnMobile{
+        display: none;
     }
-
-    .header-content {
-        flex-wrap: nowrap;
-    }
-
-    nav {
-        margin-top: 0;
-        width: auto;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 3rem;
+    .menu-button{
+        display: block;
+        
     }
 }
 
@@ -139,4 +140,14 @@ footer {
     .footer-section {
         flex-basis: 100%;
     }
+}
+@media screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+.nav-logo img {
+    max-height: 50px; /* Adjust the height as needed */
+    width: auto;
+    object-fit: contain;
 }
