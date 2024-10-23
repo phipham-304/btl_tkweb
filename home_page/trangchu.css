@@ -1,0 +1,474 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.box {
+    height: 100%; 
+}
+
+.background {
+    background: url('group-863-97d5.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.content {
+   padding-top: 100px;
+   padding-left: 100px;
+   padding-bottom: 150px;
+   color: white;
+   line-height: 40px;
+   font-family: sans-serif;
+}
+
+.content h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.content p {
+    padding-top: 20px;
+    font-size: 40px;
+    padding-bottom: 30px;  
+    line-height: 60px;
+   
+}
+
+.btn-order {
+    background: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin-left: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    height: 57px;
+    line-height: 57px;
+    width: 213px;
+
+}
+
+.btn-order:hover {
+    background-color: rgb(210, 88, 12);
+}
+
+.banner{
+    background-image: url('banner_background.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    width: 100%;
+   display: flex;
+    color: rgb(242, 232, 232);
+    position: relative;
+    margin-top: 15px;
+ 
+}
+.banner .box-banner{
+   width: 100%;
+ position: absolute;
+ padding-top: 15px;
+}
+.banner .box-banner .title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+   
+}
+.banner .box-banner .heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+   line-height: 1.5;
+}
+.line {
+        width: 10%;
+        height: 2px;
+        background-color: rgb(255, 255, 255); /* Màu sắc của đường kẻ */
+        margin: 10px 0; /* Khoảng cách trên và dưới đường kẻ */
+
+    }
+
+
+    .box-about1{
+        display:flex;
+        max-width: 100%;
+        justify-content: center;
+       margin: auto;
+    }
+    .box-about1 .item-left{
+        width: 50%;
+      margin: 0;
+      
+    }
+    .box-about1 .item-left .title {
+        color: #333;
+        font-family: Montserrat, Verdana, Geneva, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 0 0 10px;
+        text-align: center;
+    }
+    .box-about1 .item-left .sub-text {
+        color: #666;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin:auto ;
+        width: 80%;
+        text-align: left;
+       
+    }
+    .box-about1 .item-right {
+       width: 50%;
+        margin-right: 0px; 
+    }
+    
+    .item-right img{  /* cho ảnh responsive theo màn hình  */
+        max-width: 100%;
+        display: block;
+    }
+    
+
+
+    .box-about1 .item-left .box-btn {
+        text-align: center;
+    }
+    .box-about1 .item-left .btn-button {
+        background: #d83a3a;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        height: 42px;
+        line-height: 42px;
+        margin-bottom: 20px;
+        padding: 0;
+        text-align: center;
+        width: 172px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+    .btn-button:hover {
+        transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    }
+    @media (max-width: 768px) {
+        .box-about1  {
+            flex-direction: column; /* Xếp cột theo chiều dọc */
+        }
+        .box-about1 .item-right {
+            width: 100%; /* Đặt độ rộng mỗi cột là 100% */
+            margin-bottom: 20px; /* Thêm khoảng cách giữa các cột theo chiều dọc */
+        }
+     
+        .box-about1 .item-left {
+            width: 100%;
+            text-align: left;
+            margin: 10px;
+        }
+        .btn-button{
+           margin-top: 20px;
+        }
+    }
+
+
+
+.box-about-2{
+    background-image: url('background.jpg');
+    color: white;
+}
+.box-about-2 .box-720 {
+    margin: auto;
+    max-width: 720px;
+    width: 100%;
+    padding: 10px;
+}
+.box-about-2 .name {
+    font-weight: 600;
+    line-height: 19px;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.box-about-2 .heading {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.box-about-2 .box-720 .sub-text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+/* tận tâm am hiểu */
+.box-1420 {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0 10px;
+    width: 100%;
+}
+.box-about-2 .list {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: space-between; /* Căn đều khoảng cách giữa các cột */
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng nếu không đủ chỗ */
+    width: 100%;
+}
+
+.box-about-2 .list .item-col-4 {
+    padding: 10px;
+    width: 18%; /* Chia đều mỗi cột khoảng 23% để tạo 5 cột trên 1 hàng */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
+}
+/* Media query cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .box-about-2 .list {
+        flex-direction: column; /* Xếp cột theo chiều dọc */
+    }
+
+    .box-about-2 .list .item-col-4 {
+        width: 100%; /* Đặt độ rộng mỗi cột là 100% */
+        margin-bottom: 10px; /* Thêm khoảng cách giữa các cột theo chiều dọc */
+    }
+}
+.box-about-2 .list .item {
+    border: 1px solid #fff;
+    border-radius: 15px;
+   float: left;
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%;
+  
+}
+.box-about-2 .list .item .conscientious {
+    background: url('icon-checked.png') no-repeat 50%;
+    /* background-size: contain; */
+}
+.box-about-2 .list .item .title {
+    color: #fff;
+    font-family: Montserrat, Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    line-height: 29px;
+    margin: 15px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.full-width {
+    display: inline-block;
+    width: 100% !important;
+}
+
+.text-center {
+    text-align: center ;
+}
+.box-about-2 .box-new-ab {
+    display: inline-block;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+}
+.box-about-2 .box-new-ab .text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 5px 0 0;
+    text-align: center;
+}
+.box-about-2 .box-new-ab .list-item {
+    margin: 5px 0 0;
+    padding: 0;
+    width: 250px;
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn đều khoảng cách giữa các cột */
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng nếu không đủ chỗ */
+    width: 100%;
+}
+.box-about-2 .box-new-ab .list-item li {
+    background: url('icon-checked.png') no-repeat;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 50px;
+    text-align: left;
+   width: 48%;
+   display: flex;
+    
+}
+
+.box-utilities {
+    display: flex;  
+    justify-content: center;         /* Căn giữa theo chiều ngang */
+    margin: 0 auto;
+    flex-wrap: wrap;               /* Căn giữa khối cha */
+    width: 100%;
+}
+
+.box-utilities .item {
+    margin: 10px;                   /* Giãn cách giữa các item */
+    text-align: center;             /* Căn giữa chữ cái */
+    width:20%;                 /* Đảm bảo mỗi item chiếm 1/3 chiều rộng */
+}
+
+.box-utilities .title {
+    color: #333;
+    font-family: Montserrat, Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    margin: 0;                     /* Đặt lại margin để có khoảng cách đều */
+    text-transform: uppercase;
+}
+/* Media Query cho màn hình nhỏ */
+@media (max-width: 768px) {         /* Bạn có thể thay đổi kích thước ở đây */
+    .box-utilities .item {
+        width: 100%;                /* Mỗi icon sẽ chiếm 100% chiều rộng */
+    }
+}
+
+
+.contain {
+    display: flex;
+    flex-wrap: wrap;              
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 100%;            /* Điều chỉnh độ rộng tối đa của container */
+}
+
+.contain .item {
+    display: flex;
+    width: 48%;                   /* Mỗi item chiếm 48% chiều rộng, đảm bảo 2 item trên 1 dòng */
+  margin-left: 15px;
+    margin-bottom: 20px;          /* Tạo khoảng cách giữa các hàng */
+}
+
+.contain .item img {
+    width: 40%;                   /* Đảm bảo ảnh chiếm 40% chiều rộng của item */
+    margin-right: 20px;           /* Khoảng cách giữa ảnh và nội dung */
+}
+
+.contain .item p {
+    width: 60%;                   /* Nội dung văn bản chiếm 60% chiều rộng của item */
+    margin: 0;                    
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .contain .item {
+        flex-direction: column;    
+        margin-right: 10px;
+        width: 100%;               
+    }
+
+    .contain .item img {
+        width: 100%;               
+        margin-bottom: 10px;       
+    }
+
+    .contain .item p {
+        width: 100%;
+    }
+}
+
+.signup-container {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+    max-width:100%;
+    margin: 0 auto;
+}
+
+.signup-container h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.signup-container p {
+    font-size: 18px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.signup-container .login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.signup-container input[type="email"] {
+    width: 60%;
+    max-width: 400px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.signup-container button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.signup-container button:hover {
+    background-color: #7e7979;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 30px 15px;
+    }
+
+    .signup-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .signup-container input[type="email"] {
+        width: 80%;
+        max-width: none;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .signup-container button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .signup-container p {
+        font-size: 18px;
+    }
+}
