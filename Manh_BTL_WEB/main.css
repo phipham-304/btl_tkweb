@@ -1,0 +1,86 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    /* Thêm CSS cho Header ở đây */
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-section {
+    flex: 2;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Điều chỉnh kích thước cột */
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    margin-top: 10px;
+}
+
+.news-item h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.category {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    flex: 1;
+}
+
+.widget {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.widget h3 {
+    margin-bottom: 10px;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget li {
+    margin-bottom: 5px;
+}
+
+.widget a {
+    text-decoration: none;
+    color: #555;
+}
