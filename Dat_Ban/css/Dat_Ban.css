@@ -1,0 +1,407 @@
+*{
+    box-sizing: border-box;
+}
+.clearfix{ 
+        content: "";  
+        display: table;  
+        clear: both;    
+}
+
+/* Css Phần Banner */
+
+body{
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #adadad;
+    min-height: 100vh;
+}
+.banner{
+    background: url(../img/banner-bg.png) bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 0 0;
+    margin-bottom: 30px;
+}
+.banner .title{
+    margin: 30px 0 10px;
+    font-size: 24px;
+    line-height: 30px;
+}
+.banner .text-banner ul li{
+    margin-top: 5px;
+}
+@media only screen and (min-width: 767px) {
+    .banner {
+        background: url('../img/home-banner-bg.png') top center;
+        background-repeat: no-repeat;
+        margin-top: 0%;
+        padding: 240px 0 540px;
+        margin-bottom: -360px;
+    }
+    .banner .text-banner {
+        margin-bottom: 0;
+        max-width: 593px;
+    }
+    .banner .title{
+        margin: 0 0 30px 0;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .text-banner ul li{
+        line-height: 25px;
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+    .photo{
+        display: none;
+    }  
+}
+.banner .photo {
+    text-align: center;
+    position: relative;
+    padding: 0 5px 0 20px;
+    bottom: -10px;
+}
+.banner .photo img{
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+.banner .container{
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+}
+.banner ul{
+    padding: 20px;
+}
+.banner ul li::marker{
+    color: red;
+}
+.banner .title{
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+/* Css Phần Content */
+
+/* Phần giới thiệu */
+.box-gioithieu {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    height: auto;
+}
+.heading {
+    text-align: center;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    font-family: sans-serif;
+    color: black;
+}
+@media only screen and (min-width: 767px) {
+    .heading {
+        font-size: 40px;
+        line-height: 100%;
+        margin-top: 130px;
+        padding-top: 80px;
+    }
+    .box-gioithieu .list li .title {
+        margin: 0 0 6px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .box-gioithieu .list li .info .txt{
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+.box-gioithieu ul li{
+    list-style-type: none;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #adadad;
+    float: left;
+}
+.box-gioithieu .list .title {
+    margin: 0 0 6px;
+    color: #C00A27;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.gioithieu img{
+    width: 20%;
+    height: auto;
+    float: left;
+}
+.info{
+    width: 75%;
+    margin-left: 5%;
+    padding: 10px auto;
+    float: left;
+}
+.txt{
+    max-width:100% ;
+}
+
+/* Phần cam kết */ 
+.camket{
+    background: url('../img/commit-bg-mobile.png') center;
+    background-repeat: repeat-x;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+.box-camket {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-top: -10px;
+    padding: 10px;
+    color: #ffffff;
+}
+.box-camket .heading{
+    margin: 40px 0 40px;
+}
+.box-camket ul li{
+    list-style-type: none;
+}
+.box-camket .list{
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng nếu không đủ chỗ */
+    justify-content: center;
+}
+.box-camket .list li {
+    width: 50%;
+    padding: 0 10px;
+    /* float: left; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.box-camket .list li p{
+    /* float: left; */
+    margin-top: -15px;
+}
+.box-camket .list li img {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 20px;
+}
+.text-top-camket{
+    text-align: center;
+    font-size: 15px;
+    color: #adadad;
+    margin-top: 20px;
+}
+.text-bottom-camket{
+    text-align: center;
+    font-size: 20px;
+    color: #e74c3c;
+}
+.box-camket .list{
+    margin-top: 30px;
+}
+.box-camket .list .txt {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    height: 36px;
+}
+@media only screen and (min-width: 767px) {
+    .camket {
+        padding: 95px 0 150px;
+        margin: 25px 0 -30px;
+        background: url('../img/commit-bg.png') top center;
+        background-repeat: no-repeat;
+    }
+    .box-camket .list li img {
+        margin-bottom: 20px;
+        width: 72px;
+        height: 72px;
+    }
+    .box-camket .list li {
+        width: 33.33%;
+        padding: 0 40px;
+        margin-bottom: 50px;
+        float: left;
+    }
+    .box-camket .list .txt {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        height: 50px;
+    }
+}
+
+/* Phần giới thiệu các loại tiệc */
+.box-cacloaitiec{
+    padding: 0 10px 30px;
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+}
+.box-cacloaitiec .heading{
+    margin: 40px 0 50px;
+}
+.box-cacloaitiec ul li{
+    list-style-type: none;
+}
+.box-cacloaitiec .list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box-cacloaitiec .list li {
+    width: 50%;
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cacloaitiec img {
+    max-width: 95%;
+}
+.box-cacloaitiec .list li .title{
+    color: red;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.box-cacloaitiec .list li .txt {
+    font-weight: 400;
+    color: #666666;
+}
+@media only screen and (min-width:767px){
+    .box-cacloaitiec .list li {
+        width: 33.33%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    .box-cacloaitiec .list li .title{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .box-cacloaitiec .list li .txt{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+/* Phần liên hệ */
+.box-lienhe {
+    background: url(../img/contact-bg.jpg) center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    padding: 30px 0;
+}
+.box-lienhe .container{
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 5px;   
+}
+.box-lienhe .form-lienhe{
+    max-width: 500px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+}
+.box-lienhe .title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: sans-serif;
+}
+.box-lienhe .form {  
+    text-align: center;
+}
+.box-lienhe .container{
+    margin: 0 auto;
+}
+.box-lienhe .photo-lienhe{
+    margin: 0 auto;
+    display: block;
+}
+.box-lienhe .container img{
+    max-width: 100%;
+    padding: 0 5px;
+    height: auto;
+}
+p {
+    display: block;
+}
+.box-lienhe .txt {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+input[type="text"], input[type="tel"] {  
+    width: 100%; /* Chiều rộng 100% */  
+    padding: 10px; /* Padding */  
+    margin: 10px 0; /* Khoảng cách */  
+    border: none; /* Không viền */  
+}  
+.box-lienhe .container button {  
+    background: #333333; /* Màu nút */  
+    color: white; /* Màu chữ nút */  
+    padding: 10px 20px; /* Padding */  
+    border: none; /* Không viền */  
+    cursor: pointer; /* Con trỏ chuột */  
+    font-size: 16px; /* Kích thước chữ nút */
+}
+@media only screen and (min-width:960px){
+    .box-lienhe .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box-lienhe .container .form-lienhe {
+        width: 50%;
+        margin: 0 auto 20px;
+    }
+    .box-lienhe .container img{
+        width: 50%;
+    }
+    .box-lienhe button{
+        padding: 15px 30px;
+        font-size: 20px;
+        line-height: 27px;
+        margin-top: 25px;
+    }
+    input[type="text"], input[type="tel"]{
+        height: 50px;
+        padding: 10px 20px;
+        font-size: 15px;
+        line-height: 150%;
+    }
+}
+@media only screen and (min-width:767px) {
+    .box-lienhe  .title{
+        margin: 0 0 15px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+.box-lienhe .form-lienhe .form button:hover{
+    background-color: #7f8c8d;
+}
+
+.error {  
+    color: red;
+    display: none;
+}  
