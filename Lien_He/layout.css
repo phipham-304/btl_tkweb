@@ -112,7 +112,7 @@ footer {
     color: #333;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .row {
@@ -161,4 +161,87 @@ h3 {
     .col {
         margin-bottom: 20px;
     }
+}   
+/* Trong file layout.css */
+.header-content{
+    width: 100%;
+    height: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 10px;
+    background: url(./public/bg-td-top-pc.jpg) no-repeat center center/cover;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.info{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.list-item{
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wrap;
+    padding: 0 10px 0 10px;
+}
+.item{
+    width: 300px;
+}
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+.col-item{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: 45px;
+    
+    font-size: 20px;
+    
+}
+.location-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:white;
+    overflow: hidden;
+    transform: translateY(-55%);
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+}
+.location-icon i{
+    font-size: 30px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(30%);
+}
+.banner-info{
+    text-align: center;
+    padding: 70px 0 40px 0;
+}
+.contact-info{
+    width: 50%;
+    
+    margin: 0 auto;
+}
+.work-time{
+    font-size: 20px;
+    margin: 50px;
+}
+.work-time,.email{
+    display: inline-block;
+}
+.email span{
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+}
+.email i{
+    font-size: 150%;
 }

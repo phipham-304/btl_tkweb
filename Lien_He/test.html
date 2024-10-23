@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  z-index: 10;
+}
+
+.text-container h2 {
+  margin-top: 0;
+}
+
+.text-container p {
+  margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="https://i.imgur.com/r56J46R.jpg" alt="Store" class="image">
+  <div class="pin"></div>
+  <div class="text-container">
+    <h2>Bếp 1:</h2>
+    <p>212B/D18AB Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, TP. HCM</p>
+  </div>
+</div>
+
+</body>
+</html>
