@@ -1,4 +1,10 @@
 
+
+@media screen and (max-width: 767px) {
+  .footer-section {
+      flex-basis: 100%;
+  }
+}   
   
   @media only screen and (min-width: 960px) {
     .mt-70 {
