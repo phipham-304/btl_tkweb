@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -52,7 +55,8 @@
                         <p> <span style="font-weight: bold;">Bep 1:</span> <br> So 3 , Cau Giay , Viet Nam </p>
                     </div>
                 </div>
-                <div class="col-item">
+                <div class="add" style="width: 40px;"></div>
+                <div class="col-item" >
                     <div class="item">
                         <img src="./public/bang-hieu-nha-hang-3.jpg" alt="">
                     </div>
@@ -65,28 +69,40 @@
                 </div>
 
             </div> 
-            <div class="contact-info">
-                <div class="work-time">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span>10:00 - 18:00  | Thu Hai - Chu Nhat</span>
-                </div> 
-                <div class="email">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span> <a href="#"></a> utckitchen@gmail.com</span>
-                </div>
-                <div class="telephone">
-                    
-                </div>
+            <div class="text-center">
+                <ul class="list">
+                    <li class="f-contact-link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="calendar" style="margin-right: 35px;">10:00 - 18:00 &nbsp;&nbsp;|&nbsp;&nbsp;Thứ Hai - Chủ Nhật</span>
+                        <span class="mail">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a> <span class="order-email">order.utckitchen@gmail.com </span> </a>
+                        </span> 
+                    </li>
+                    <li class="contact-link">
+                        <span class="phone"> 
+                            <i class="fa-solid fa-tty"></i>
+                            1900 633 818
+                            </span>
+                        <div class="network">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i> </a>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <div class="map">
+
         </div>
     </main>
     <footer>
-        <div class="row">
-            <div class="col">
+        <div class="footer-row">
+            <div class="footer-col">
                 <img src="./public/Brown and White SImple Modern Professional Catering Logo.png" class="logo">
                 <p>Nơi trải nghiệm sự thăng hoa của ẩm thực, mang hương vị nhà hàng đến với gia đình bạn.                </p>
             </div>
-            <div class="col">
+            <div class="footer-col">
                 <h3>Nhà Hàng</h3>
                 <p>Số 3</p>
                 <p>Cầu Giấy</p>
@@ -95,7 +111,7 @@
                 <p class="email-id">pp9373334@gmail.com</p>
                 <h4>+84 0987654321</h4>
             </div>
-            <div class="col">
+            <div class="footer-col">
                 <h3>Liên kết</h3>
                 <ul>
                     <li><a href="index.html">Trang chủ</a></li>
@@ -106,7 +122,7 @@
                     <li><a href="contact.html">Liên hệ</a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="footer-col">
                 <h3>Đăng ký ngay</h3>
                 <form>
                     <input type="email" placeholder="Nhập email của bạn" required>

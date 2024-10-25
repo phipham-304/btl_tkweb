@@ -1,64 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
 
-.container {
-  position: relative;
-  width: 300px;
-  height: 400px;
-}
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.image {
-  width: 100%;
-  height: auto;
-}
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-.pin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  z-index: 10;
-}
+        .icon {
+            margin-right: 10px;
+            font-size: 24px;
+            color: #777;
+        }
 
-.text-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  padding: 10px;
-  z-index: 10;
-}
+        .text {
+            font-size: 16px;
+            color: #333;
+        }
 
-.text-container h2 {
-  margin-top: 0;
-}
+        .social-media {
+            display: flex;
+            gap: 10px;
+        }
 
-.text-container p {
-  margin-bottom: 0;
-}
-</style>
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .instagram {
+            background-color: linear-gradient(to right, #f09433, #e66465);
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <img src="https://i.imgur.com/r56J46R.jpg" alt="Store" class="image">
-  <div class="pin"></div>
-  <div class="text-container">
-    <h2>Bếp 1:</h2>
-    <p>212B/D18AB Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, TP. HCM</p>
-  </div>
-</div>
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="icon fa fa-calendar-alt"></i>
+            <span class="text">10:00 - 18:00 | Thứ Hai - Chủ Nhật</span>
+        </div>
+        <div class="contact-item">
+            <i class="icon fa fa-phone"></i>
+            <span class="text">1900 633 818</span>
+        </div>
+        <div class="contact-item">
+            <i class="icon fa fa-envelope"></i>
+            <span class="text">order.tastykitchen@gmail.com</span>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <a href="#" class="social-icon facebook" target="_blank"></a>
+        <a href="#" class="social-icon instagram" target="_blank"></a>
+    </div>
 
 </body>
 </html>

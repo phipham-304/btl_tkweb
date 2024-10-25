@@ -1,20 +1,24 @@
+/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Navigation Styling */
 nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
 nav ul {
     width: 100%;
     list-style: none;
@@ -22,10 +26,12 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
 }
-nav li{
+
+nav li {
     height: 100px;
 }
-nav a{
+
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -33,18 +39,23 @@ nav a{
     align-items: center;
     color: black;
 }
-nav a:hover{
+
+nav a:hover {
     background-color: #f0f0f0;
 }
-nav a:first-child:hover{
+
+nav a:first-child:hover {
     background-color: white;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-.sidebar{
+
+/* Sidebar Styling */
+.sidebar {
     position: fixed;
-    top :0;
+    top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
@@ -57,39 +68,44 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
     color: black;
+    transition: all 0.3s ease-in-out;
 }
-.sidebar {
-    display: none;
-    transition: all 0.3s ease-in-out; /* Thêm thuộc tính transition */
-}
-.sidebar li{
+
+.sidebar li {
     width: 100%;
 }
 
-.sidebar a{
+.sidebar a {
     width: 100%;
 }
-.sidebar li:first-child{
+
+.sidebar li:first-child {
     margin-left: 70%;
 }
+
+/* Main Content Styling */
 main {
-    
+    flex: 1;
 }
 
-.menu-button{
+/* Menu Button Styling */
+.menu-button {
     display: none;
 }
+
+/* Default Navigation Styling */
 .default-nav {
     font-size: 20px;
     font-weight: bold;
 }
+
+/* Responsive Navigation */
 @media screen and (max-width: 800px) {
-    .hideOnMobile{
+    .hideOnMobile {
         display: none;
     }
-    .menu-button{
+    .menu-button {
         display: block;
-        
     }
 }
 
@@ -98,14 +114,15 @@ main {
         width: 100%;
     }
 }
+
+/* Logo Styling */
 .nav-logo img {
-    max-height: 100px; /* Adjust the height as needed */
+    max-height: 100px;
     width: auto;
     object-fit: contain;
 }
 
-/* ... Your previous styles ... */
-
+/* Footer Styling */
 footer {
     background-color: #f2f2f2;
     padding: 50px 0;
@@ -115,7 +132,7 @@ footer {
     margin-top: 10px;
 }
 
-.row {
+.footer-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -123,7 +140,7 @@ footer {
     margin: 0 auto;
 }
 
-.col {
+.footer-col {
     flex: 1;
     padding: 0 20px;
 }
@@ -147,23 +164,17 @@ h3 {
 .email-id:hover {
     text-decoration: underline;
 }
-.col ul {
+
+.footer-col ul {
     list-style: none;
     padding: 0;
 }
 
-/* Styling for smaller screens */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
+/* Responsive Footer */
 
-    .col {
-        margin-bottom: 20px;
-    }
-}   
-/* Trong file layout.css */
-.header-content{
+
+/* Header Content Styling */
+.header-content {
     width: 100%;
     height: 200px;
     color: white;
@@ -174,46 +185,51 @@ h3 {
     margin-bottom: 40px;
     text-align: center;
 }
-.info{
+
+/* Info Section Styling */
+.info {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
     padding-bottom: 40px;
     text-align: center;
 }
-.list-item{
+
+/* List Item Styling */
+.list-item {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 0 10px 0 10px;
 }
-.item{
+
+.item {
     width: 300px;
 }
-.item img{
+
+.item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
 
-}
-.col-item{
+.col-item {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-right: 45px;
-    
+    /* margin-left: 40px; */
     font-size: 20px;
-    
 }
-.location-icon{
+
+.location-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background:white;
+    background: white;
     overflow: hidden;
     transform: translateY(-55%);
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.location-icon i{
+
+.location-icon i {
     font-size: 30px;
     color: red;
     display: flex;
@@ -221,27 +237,94 @@ h3 {
     align-items: center;
     transform: translateY(30%);
 }
-.banner-info{
+
+/* Banner Info Styling */
+.banner-info {
     text-align: center;
     padding: 70px 0 40px 0;
 }
-.contact-info{
-    width: 50%;
-    
-    margin: 0 auto;
-}
-.work-time{
-    font-size: 20px;
+
+/* Text Center Styling */
+.text-center {
+    text-align: center;
     margin: 50px;
 }
-.work-time,.email{
-    display: inline-block;
+
+.text-center ul li {
+    list-style: none;
+    margin: 20px;
+    font-size: 20px;
 }
-.email span{
-    font-size: 18px;
+
+.mail span {
+    text-decoration: none;
     color: red;
     cursor: pointer;
 }
-.email i{
+
+.text-center ul li i {
     font-size: 150%;
+}
+
+/* Network and Phone Styling */
+.network, .phone {
+    display: inline-block;
+}
+
+.phone {
+    transform: translateX(-155%);
+}
+
+.network a {
+    margin-right: 20px;
+}
+
+.network a:first-child {
+    transform: translateX(-50%);
+}
+
+/* Responsive Info Section */
+.contact-link{
+    display: flex; justify-content: center; padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+    }
+    .footer-col,.col-item {
+        margin-bottom: 20px;
+    }
+    .info, .list {
+        text-align: center;
+    }
+    .calendar, .mail, .phone, .network {
+        display: flex;
+        margin: 10px 0;
+        justify-content: center;
+    }
+    .list span{
+        display: flex;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .network a {
+        margin: 0 10px;
+    }
+    .add{
+        display: none;
+    }
+    .contact-link, .f-contact-link{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+.map{
+    width: 80%;
+    height: 500px;
+    margin-top: 20px;
+    margin: 0 auto;
+    background: url(../public/Screenshot\ 2024-10-25\ 100915.png) no-repeat center center/cover;  
 }
