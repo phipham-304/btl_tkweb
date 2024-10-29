@@ -114,11 +114,11 @@
         <form>
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" class="username" name="username" required >
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" class="password" name="password" required>
             </div>
             <button type="submit">Log In</button>
         </form>
@@ -145,7 +145,7 @@ function init() {
     client_id: "417278201013-bt8s4fsscmho0pl6po3nnk0gogpjd3qm.apps.googleusercontent.com",
     callback: onSignIn
   });
-  
+
   // Tạo nút đăng nhập Google
   google.accounts.id.renderButton(
     document.querySelector('.signInButton'),
@@ -156,4 +156,12 @@ function init() {
 window.onload = init;
     </script>
 </body>
+<script>
+    const username = document.querySelector('.username');
+    const password = document.querySelector('.password');
+    function handleSubmit(){
+        console.log(111);
+        alert('ban da submit');
+    }
+</script>
 </html>

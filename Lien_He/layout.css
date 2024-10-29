@@ -328,3 +328,13 @@ h3 {
     margin: 0 auto;
     background: url(../public/Screenshot\ 2024-10-25\ 100915.png) no-repeat center center/cover;  
 }
+.social{
+    height: 50px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.fa,.insta,.twitter{
+    margin-right: 10px;
+}
