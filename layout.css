@@ -1,0 +1,267 @@
+/* Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 100px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav a:first-child:hover {
+    background-color: white;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar li:first-child {
+    margin-left: 70%;
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+}
+
+/* Menu Button Styling */
+.menu-button {
+    display: none;
+}
+
+/* Default Navigation Styling */
+.default-nav {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Logo Styling */
+.nav-logo img {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.email-id {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.email-id:hover {
+    text-decoration: underline;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Responsive Info Section */
+.contact-link{
+    display: flex; justify-content: center; padding-left: 15px;
+}
+.user-nav{
+    font-size: 24px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    right:10px;
+    top:6.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.search,.user,.favourite,.cart{
+    cursor: pointer;
+}
+.search:hover,.user:hover,.favourite:hover,.cart:hover{
+    color: red;
+    transition: 0.5s;
+}
+.hide-user-nav{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+    }
+    .footer-col,.col-item {
+        margin-bottom: 20px;
+    }
+    .info, .list {
+        text-align: center;
+    }
+    .calendar, .mail, .phone, .network {
+        display: flex;
+        margin: 10px 0;
+        justify-content: center;
+    }
+    .list span{
+        display: flex;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .network a {
+        margin: 0 10px;
+    }
+    .add{
+        display: none;
+    }
+    .contact-link, .f-contact-link{
+        display: flex;
+        flex-direction: column;
+    }
+    .user-nav{
+        display: none;
+    }
+    .hide-user-nav{
+        width: 100px;
+        display: flex;
+        position: absolute;
+        top:35px;
+        right: 64px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+
+
+}
+.map{
+    width: 80%;
+    height: 500px;
+    margin-top: 20px;
+    margin: 0 auto;
+    background: url(../public/Screenshot\ 2024-10-25\ 100915.png) no-repeat center center/cover;  
+}
+.social{
+    height: 50px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.fa,.insta,.twitter{
+    margin-right: 10px;
+}

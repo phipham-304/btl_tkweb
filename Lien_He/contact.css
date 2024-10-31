@@ -287,6 +287,35 @@ h3 {
 .contact-link{
     display: flex; justify-content: center; padding-left: 15px;
 }
+.user-nav{
+    font-size: 24px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    right:10px;
+    top:6.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.search,.user,.favourite,.cart{
+    cursor: pointer;
+}
+.search:hover,.user:hover,.favourite:hover,.cart:hover{
+    color: red;
+    transition: 0.5s;
+}
+.hide-user-nav{
+    display: none;
+}
+.res-contact, .res-contact-email, .res-contact-phone, .res-net-work {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .footer-row {
@@ -315,11 +344,41 @@ h3 {
     .add{
         display: none;
     }
-    .contact-link, .f-contact-link{
-        display: flex;
-        flex-direction: column;
+    .user-nav{
+        display: none;
     }
-
+    .hide-user-nav{
+        width: 100px;
+        display: flex;
+        position: absolute;
+        top:35px;
+        right: 64px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+    .text-center{
+        display: none;
+    }
+    .res-contact, .res-contact-email, .res-contact-phone, .res-net-work{
+        display: flex;
+    }
+    .calendar-icon, .email-icon, .phone-icon, .fa-icon, .insta-icon{
+        
+        margin:0 20px 20px 20px;
+        font-size: 24px;
+    }
+    .col-item{
+        width: 90%;
+    }
+    .item{
+        width: 100%;
+    }
+    .phone-icon{
+        transform: translateY(-15%);
+    }
+    .email-icon{
+        transform: translateY(-15%);
+    }
 }
 .map{
     width: 80%;
