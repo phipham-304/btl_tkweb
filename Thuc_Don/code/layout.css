@@ -277,7 +277,7 @@ a{
     }
 }
 .banner{
-    background-image: url(./assets/image/bg-td-top-pc.jpg) ;
+    background-image: url(../assets/image/bg-td-top-pc.jpg) ;
     /* /* background-size: cover; */
     background-position: top;
     /* background-size: 100%; */
