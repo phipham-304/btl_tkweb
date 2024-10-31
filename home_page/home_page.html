@@ -226,6 +226,8 @@
         và ưu đãi mới nhất từ TASTY Kitchen</p>
         <form action="" onsubmit=" return validform(this);">
     <div class="login">
+        <input type="text" name="full_name" placeholder="Nhập họ và tên">
+        <input type="tel" name="phone_number" placeholder="Nhập số điện thoại">
         <input type="email" name="input" placeholder="Nhập địa chỉ Email">
         <button  value="submit" type="submit">Đăng ký</button>
     </div>
@@ -298,19 +300,60 @@
     </script>
 
 
-    <script>
-        function isempty(check) {
-            return check.value.trim().length==0;
-        }
-        function validform(res) {
-            if(isempty(res.input)){
-                alert("vui lòng nhập email!");
-                input.focus();
-                return false;
-            }
-            return true;
-        }
-    </script>
+<script>
+    function isempty(input) {
+       return input.value.trim().length == 0;
+   }
+
+   function validform(form) {
+       const fullNameInput = form.full_name;
+       const phoneNumberInput = form.phone_number;
+       const emailInput = form.input;
+
+       // Kiểm tra họ và tên
+       if (isempty(fullNameInput)) {
+           alert("Vui lòng nhập họ và tên!");
+           fullNameInput.focus();
+           return false;
+       }
+
+       const nameRegex = /^[a-zA-ZÀ-ỹ\s]+$/;
+       if (!nameRegex.test(fullNameInput.value)) {
+           alert("Họ tên chỉ được chứa ký tự chữ cái và khoảng trắng.");
+           fullNameInput.focus();
+           return false;
+       }
+
+       // Kiểm tra số điện thoại
+       if (isempty(phoneNumberInput)) {
+           alert("Vui lòng nhập số điện thoại!");
+           phoneNumberInput.focus();
+           return false;
+       }
+       if(isNaN(phoneNumberInput)){
+        alert("chỉ được nhập kí tự 0->9");
+        phoneNumberInput.value="";
+        phoneNumberInput.focus();
+       }
+
+       // Kiểm tra email
+       if (isempty(emailInput)) {
+           alert("Vui lòng nhập email!");
+           emailInput.focus();
+           return false;
+       }
+
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       if (!emailRegex.test(emailInput.value)) {
+           alert("Vui lòng nhập địa chỉ email hợp lệ!");
+           emailInput.focus();
+           return false;
+       }
+
+       return true;
+   }
+
+</script>
 
     
 </body>
