@@ -58,11 +58,13 @@
             border-color: #FF6F00;
             outline: none;
         }
-        button {
+        .login-button {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.6rem 1rem 0.6rem 1em;
+            
             background-color: #FF6F00;
             color: white;
+            text-decoration: none;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
@@ -72,7 +74,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        button:hover {
+        .login-button:hover {
             background-color: #E65100;
         }
         .forgot-password {
@@ -119,7 +121,7 @@
                 <label for="password">Password</label>
                 <input type="password" class="password" name="password" required>
             </div>
-            <button onclick=handleLogin()>Log In</button>
+            <a href="./home_page/home_page.html" class="login-button">Log In</a>
         </form>
         <div class="forgot-password">
             <a href="#">Forgot password?</a>
@@ -152,7 +154,7 @@ function init() {
   );
 }
 function handleLogin(){
-    window.location.href = "http://127.0.0.1:5500/home_page/home_page.html"; 
+    // window.location.href = "http://127.0.0.1:5500/home_page/home_page.html"; 
 }
 window.onload = init;
     </script>
