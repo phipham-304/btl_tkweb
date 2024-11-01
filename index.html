@@ -57,7 +57,6 @@
         input[type="password"]:focus {
             border-color: #FF6F00;
             outline: none;
-
         }
         button {
             width: 100%;
@@ -120,7 +119,7 @@
                 <label for="password">Password</label>
                 <input type="password" class="password" name="password" required>
             </div>
-            <button type="submit">Log In</button>
+            <button onclick=handleLogin()>Log In</button>
         </form>
         <div class="forgot-password">
             <a href="#">Forgot password?</a>
@@ -152,16 +151,11 @@ function init() {
     { theme: "outline", size: "large" }
   );
 }
-
+function handleLogin(){
+    window.location.href = "http://127.0.0.1:5500/home_page/home_page.html"; 
+   
+}
 window.onload = init;
     </script>
 </body>
-<script>
-    const username = document.querySelector('.username');
-    const password = document.querySelector('.password');
-    function handleSubmit(){
-        console.log(111);
-        alert('ban da submit');
-    }
-</script>
 </html>
