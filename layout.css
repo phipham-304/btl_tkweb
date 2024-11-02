@@ -51,6 +51,7 @@ nav li:first-child {
     margin-right: auto;
 }
 
+
 /* Sidebar Styling */
 .sidebar {
     position: fixed;
@@ -89,7 +90,10 @@ nav li:first-child {
 .default-nav {
     font-size: 20px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
 }
+
 @media screen and (max-width: 800px) {
     .hideOnMobile {
         display: none;
@@ -193,7 +197,7 @@ footer h3 {
     transition: 0.5s;
 }
 .inline-user, .inline-cart{
-    visibility: hidden;
+    display: none;
 }
 @media (max-width: 768px) {
     .footer-row {
@@ -206,14 +210,14 @@ footer h3 {
         display: none;
     }
     .inline-user{
-       visibility: visible;
+       display: block;
         position: absolute;
         top:3rem;
         left: 10rem;
         cursor: pointer;
     }
     .inline-cart{
-        visibility: visible;
+        display: block;
         position: absolute;
         top:3rem;
         left: 12rem;
