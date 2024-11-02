@@ -174,7 +174,8 @@ footer h3 {
     width: 200px;
     height: 50px;
     display: flex;
-    position: fixed;
+    position: fixed ;
+    z-index: 1000;
     right:10px;
     top:6.2rem;
     background-color: rgba(0, 0, 0, 0.5);
