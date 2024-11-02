@@ -212,14 +212,14 @@ footer h3 {
     .inline-user{
        display: block;
         position: absolute;
-        top:3rem;
+        top:1rem;
         left: 10rem;
         cursor: pointer;
     }
     .inline-cart{
         display: block;
         position: absolute;
-        top:3rem;
+        top:1.05rem;
         left: 12rem;
         cursor: pointer;
     }

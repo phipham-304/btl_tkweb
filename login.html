@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTC Kitchen Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFF3E0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23f4b942' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .welcome-text {
+            color: #FF6F00;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #E65100;
+            margin-bottom: 1.5rem;
+        }
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #FF8F00;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 93%;
+            padding: 0.75rem;
+            border: 2px solid #FFB300;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #FF6F00;
+            outline: none;
+
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #FF6F00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background-color: #E65100;
+        }
+        .forgot-password {
+            margin-top: 1rem;
+        }
+        .forgot-password a {
+            color: #FF8F00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .decoration {
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }   
+        .signInButton {
+    margin-top: 1rem; /* Khoảng cách trên nút */
+    text-align: center; /* Căn chỉnh nút */
+}
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="welcome-text">
+            <span class="decoration">🍽️</span>
+            Welcome to UTC Kitchen
+            <span class="decoration">👨‍🍳</span>
+        </div>
+        <h2>Login to Your Account</h2>
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button onclick=handleLoginGg()>Log In</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
+        <div  class="signInButton">  
+     
+        </div>
+    </div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleLoginGg(){
+            event.preventDefault();
+            console.log("Login success");
+            window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html";
+        }
+        function onSignIn(googleUser) {
+  // Lấy thông tin người dùng
+        console.log(googleUser);
+        if(googleUser){
+            console.log("Login success");
+            window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html"; 
+        }
+}   
+
+function init() {
+  // Khởi tạo Google Sign-In với ID client và URI redirect
+  google.accounts.id.initialize({
+    client_id: "417278201013-bt8s4fsscmho0pl6po3nnk0gogpjd3qm.apps.googleusercontent.com",
+    callback: onSignIn
+  });
+  
+  // Tạo nút đăng nhập Google
+  google.accounts.id.renderButton(
+    document.querySelector('.signInButton'),
+    { theme: "outline", size: "large" }
+  );
+}
+
+window.onload = init;
+    </script>
+</body>
+</html>
