@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTC Kitchen</title>
+    <title>UTC Kitchen Login</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,14 +57,13 @@
         input[type="password"]:focus {
             border-color: #FF6F00;
             outline: none;
+
         }
-        .login-button {
+        button {
             width: 100%;
-            padding: 0.6rem 1rem 0.6rem 1em;
-            
+            padding: 0.75rem;
             background-color: #FF6F00;
             color: white;
-            text-decoration: none;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
@@ -74,7 +73,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .login-button:hover {
+        button:hover {
             background-color: #E65100;
         }
         .forgot-password {
@@ -115,30 +114,36 @@
         <form>
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" class="username" name="username" required >
+                <input type="text" id="username" name="username" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" class="password" name="password" required>
+                <input type="password" id="password" name="password" required>
             </div>
-            <a href="./home_page/home_page.html" class="login-button">Log In</a>
+            <button onclick=handleLoginGg()>Log In</button>
         </form>
         <div class="forgot-password">
             <a href="#">Forgot password?</a>
         </div>
-        <div  class="signInButton" onclick=handleClick()>  
+        <div  class="signInButton">  
      
         </div>
     </div>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
+        function handleLoginGg(){
+            event.preventDefault();
+            console.log("Login success");
+            window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html";
+        }
         function onSignIn(googleUser) {
   // Lấy thông tin người dùng
         console.log(googleUser);
         if(googleUser){
-            window.location.href = "http://127.0.0.1:5500/home_page/home_page.html"; 
+            console.log("Login success");
+            window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html"; 
         }
-}
+}   
 
 function init() {
   // Khởi tạo Google Sign-In với ID client và URI redirect
@@ -146,16 +151,14 @@ function init() {
     client_id: "417278201013-bt8s4fsscmho0pl6po3nnk0gogpjd3qm.apps.googleusercontent.com",
     callback: onSignIn
   });
-
+  
   // Tạo nút đăng nhập Google
   google.accounts.id.renderButton(
     document.querySelector('.signInButton'),
     { theme: "outline", size: "large" }
   );
 }
-function handleLogin(){
-    // window.location.href = "http://127.0.0.1:5500/home_page/home_page.html"; 
-}
+
 window.onload = init;
     </script>
 </body>
