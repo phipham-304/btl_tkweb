@@ -133,8 +133,17 @@
     <script>
         function handleLoginGg(){
             event.preventDefault();
-            console.log("Login success");
-            window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html";
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username.length >=8 && password.length >= 8) {
+                console.log("Login success");
+                window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html"; 
+            } else {
+                alert("Tên người dùng hoặc mật khẩu không chính xác.");
+            }
+            // console.log("Login success");
+            // window.location.href = "https://phipham-304.github.io/btl_tkweb/home_page/home_page.html";
         }
         function onSignIn(googleUser) {
   // Lấy thông tin người dùng
