@@ -321,15 +321,6 @@ footer h3 {
     .user-nav{
         display: none;
     }
-    .hide-user-nav{
-        width: 100px;
-        display: flex;
-        position: absolute;
-        top:35px;
-        right: 64px;
-        font-size: 20px;
-        justify-content: space-between;
-    }
     .text-center{
         display: none;
     }

@@ -192,13 +192,17 @@ footer h3 {
 .search,.user,.favourite,.cart{
     cursor: pointer;
 }
-.search:hover,.user:hover,.favourite:hover,.cart:hover{
+.search:hover,.favourite:hover,.cart:hover{
     color: red;
     transition: 0.5s;
 }
+.user a i:hover {
+    color: red; 
+  }
 .inline-user, .inline-cart{
     display: none;
 }
+
 @media (max-width: 768px) {
     .footer-row {
         flex-direction: column;
@@ -213,14 +217,14 @@ footer h3 {
        display: block;
         position: absolute;
         top:1rem;
-        left: 10rem;
+        left: 8rem;
         cursor: pointer;
     }
     .inline-cart{
         display: block;
         position: absolute;
         top:1.05rem;
-        left: 12rem;
+        left: 11rem;
         cursor: pointer;
     }
     .inline-user:hover,.inline-cart:hover{
