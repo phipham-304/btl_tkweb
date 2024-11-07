@@ -68,7 +68,7 @@
                     <div class="content">
                         <h1>UTC Kitchen</h1>
                         <p>MANG ẨM THỰC<br>CAO CẤP<br>ĐẾN TẬN NHÀ</p>
-                        <a href="#" class="btn-order">ĐẶT MÓN NGAY</a><!--them link dat mon an-->
+                        <a href="../Thuc_Don/code/menu.html" class="btn-order">ĐẶT MÓN NGAY</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                         <br>
                         Với hệ thống bếp không ngừng được đầu tư và mở rộng; cùng những nguyên liệu tự nhiên, tươi ngon được lựa chọn kỹ lưỡng từ các nông trại uy tín hàng đầu Việt Nam; qua bàn tay sáng tạo, tận tâm của đội ngũ đầu bếp nhiều năm kinh nghiệm, chúng tôi tự hào mang đến cho bạn những món ăn không chỉ ngon mà còn đa dạng, tinh tế, đẹp mắt, chất lượng, sức khỏe và ngày càng đáng trải nghiệm hơn.
                     </p>
-                    <div class="box-btn"> <a href="#" class="btn-button" >ĐẶT MÓN NGAY</a> <!--them phan link dat mon vaof href-->
+                    <div class="box-btn"> <a href="../Thuc_Don/code/menu.html" class="btn-button" >ĐẶT MÓN NGAY</a> <!--them phan link dat mon vaof href-->
                     </div>
                 </div>
                 <div class="item-right">
@@ -302,6 +302,62 @@
         }
     </script>
 
+<script>
+    function isempty(input) {
+       return input.value.trim().length == 0;
+   }
+
+   function validform(form) {
+       const fullNameInput = form.full_name;
+       const phoneNumberInput = form.phone_number;
+       const emailInput = form.input;
+
+       // Kiểm tra họ và tên
+       if (isempty(fullNameInput)) {
+           alert("Vui lòng nhập họ và tên!");
+           fullNameInput.focus();
+           return false;
+       }
+
+       const nameRegex = /^[a-zA-ZÀ-ỹ\s]+$/;
+       if (!nameRegex.test(fullNameInput.value)) {
+           alert("Họ tên chỉ được chứa ký tự chữ cái và khoảng trắng.");
+           fullNameInput.focus();
+           return false;
+       }
+
+       // Kiểm tra số điện thoại
+        if (phoneNumberInput.value.trim() === "") {
+            alert("Vui lòng nhập số điện thoại!");
+            phoneNumberInput.focus();
+            return false;
+        }
+        if (isNaN(phoneNumberInput.value)) {
+            alert("Chỉ được nhập kí tự 0->9");
+            phoneNumberInput.value = "";
+            phoneNumberInput.focus();
+            return false;
+        }
+
+
+       // Kiểm tra email
+       if (isempty(emailInput)) {
+           alert("Vui lòng nhập email!");
+           emailInput.focus();
+           return false;
+       }
+
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       if (!emailRegex.test(emailInput.value)) {
+           alert("Vui lòng nhập địa chỉ email hợp lệ!");
+           emailInput.focus();
+           return false;
+       }
+
+       return true;
+   }
+
+</script>
     
 </body>
 </html>
