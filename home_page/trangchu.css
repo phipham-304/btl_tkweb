@@ -161,7 +161,7 @@ html, body {
     }
     
     .item-right img{  /* cho ảnh responsive theo màn hình  */
-        max-width: 100%;
+        width: 100%;
         display: block;
     }
     
