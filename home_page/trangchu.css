@@ -255,7 +255,7 @@ html, body {
 
 .box-about-2 .list .item-col-4 {
     padding: 10px;
-    width: 18%; /* Chia đều mỗi cột khoảng 23% để tạo 5 cột trên 1 hàng */
+    width: 20%; /* Chia đều mỗi cột khoảng 20% để tạo 5 cột trên 1 hàng */
     box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
 }
 /* Media query cho màn hình nhỏ */
